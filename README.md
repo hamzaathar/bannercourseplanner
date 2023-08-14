@@ -1,6 +1,6 @@
 # bannercourseplanner
 AUS Banner Course Planner 
-Note: Be patient, banner api is quite slow.
+Note: Be patient, banner api is quite slow. Count to atleast 5 then check console if nothing shows up.
 
 # How to use:
 1. Download the zip.
