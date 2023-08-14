@@ -1,7 +1,7 @@
 # bannercourseplanner
 AUS Banner Course Planner 
 
-What you can do: See a weeks schedule at a glance. View multiple courses and select what fit your schedule. All from the same page.
+What you can do: See a weeks schedule at a glance. View multiple courses and select what fits your schedule. All from the same page.
 
 Note: Be patient, banner api is quite slow.Count to atleast 5 then check console if nothing shows up.
 
