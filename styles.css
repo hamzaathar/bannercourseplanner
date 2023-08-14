@@ -1,0 +1,251 @@
+:root {
+    --accent-color: #e8e8e8;
+    --text-color:#323232;
+    --primary: #0867b4;
+    --secondary: #c5e3fc;
+    --accent: #0b86ea;
+    --background-color: white;
+}
+
+#program_container {
+    color: var(--text-color);
+    display: flex;
+    justify-content: flex-end;
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding-left: 20px;
+    width: auto;
+    background-color: var(--background-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+}
+
+
+
+#main_container {
+    display: flex;
+    gap:20px;
+    flex-direction: row-reverse;
+    padding: 10px 10px 10px 0;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+.term_select > p, .subj_select > p {
+    margin-bottom: 3px;
+}
+
+.course_select_container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    height: 100%;
+    gap: 10px;
+}
+
+.course_select_subject {
+    border: 1px solid var(--text-color);
+    box-sizing: border-box;
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.course_select_list {
+    overflow-y: auto;
+    background-color: var(--accent-color);
+}
+
+.course_select_list > *{
+    margin-top: 1.5px;
+    padding: 0 2px;
+}
+
+.selected {
+    background-color: var(--primary);
+    color: white;
+}
+
+.course_select_list > *:hover {
+    border-top: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.course_select_header {
+    background-color: var(--text-color);
+    padding: 2px 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close {
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    border-radius: 0.8rem;
+    line-height: 0.8rem;
+    width: 0.8rem;
+    text-align: center;
+}
+
+.close:hover {
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+.test {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.selected_courses > table {
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.selected_courses td, .selected_courses th{
+    width: 50%;
+}
+
+/* Table */
+.linemarkers {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.linemarkers > * {
+    height: 0;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.linemarkers > div:last-child {
+    outline: none;
+    border-bottom: none;
+}
+
+.header_item {
+    display: block;
+    margin: 0;
+    height: 1rem;
+    text-align: center;
+    flex: 0;
+}
+
+.table {
+    outline: 1px solid var(--accent-color);
+    position: relative;
+}
+
+.table_container {
+    display: flex;
+    height: 100%;
+    flex: 1;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    position: relative;
+}
+
+.column:first-child {
+    width: 80px;
+}
+
+.time {
+    outline: 1px solid var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 1rem;
+}
+
+.timeblock {
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.day {
+    outline: 1px solid var(--accent-color);
+    background-color: var(--background-color);
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    min-width: 130px;
+    transition: all 0.3s; 
+}
+
+.dimmed {
+    opacity: 0.3;
+}
+
+.section {
+    color: var(--primary);
+    position: absolute;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 1px solid var(--primary);
+    background-color: var(--secondary);
+    width: 116px;
+    margin-left: 2px;
+    margin-right: 2px;
+    overflow: hidden;
+    font-size: 0.7rem;
+    padding: 2px 2px;
+}
+
+.selected_section {
+    background-color: var(--accent);
+    border: none;
+    color: white;
+}
+
+.section > * {
+    margin-bottom: 1px;
+    border: none;
+    white-space: nowrap;
+}
+
+.section > *:first-child {
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin-bottom: 1px;
+}
+
+.active_course {
+    background-color: #289603;
+    border: none;
+    color: white;
+}
+
+.active_course_checkbox {
+    margin-top: 10px;
+}

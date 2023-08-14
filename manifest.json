@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "AUS Banner Course Planner",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://banner.aus.edu/"],
+      "css": ["styles.css"],
+      "js": ["js-cookie.min.js", "content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
