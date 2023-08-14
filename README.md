@@ -9,6 +9,7 @@ Count to atleast 5 then check console if nothing shows up.
 2. Extract into a folder.
 3. Go to chrome://extensions/ and enable developer mode
 4. Select load unpacked and navigate to the folder and you are ready to go.
+5. Go to the registration page on banner (must) and wait
 
 # Preview
 ![image](https://github.com/hamzaathar/bannercourseplanner/assets/74014297/5c81437b-5676-4675-b1af-2c987a4fa024)
