@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "name": "AUS Banner Course Planner",
   "version": "1.0",
+  "description": "https://github.com/hamzaathar/bannercourseplanner",
   "permissions": ["activeTab"],
   "content_scripts": [
     {
@@ -12,5 +13,8 @@
   ],
   "action": {
     "default_popup": "popup.html"
+  },
+   "icons": {
+    "128": "icon.png"
   }
 }
