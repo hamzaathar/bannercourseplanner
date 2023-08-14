@@ -311,10 +311,7 @@ class Application {
         await this.buildSubjectList();
 
         //Get the currently registered courses
-        this.getActiveRegistration().then(() => {
-            console.log('start')
-            this.buildTable();
-        });
+        const activeRegPromise = [this.getActiveRegistration()]
 
         //Loop through selectedSubj to build course lists
         if (this.selectedSubj.length > 5) this.selectedSubj.splice(5);
@@ -328,13 +325,19 @@ class Application {
 
         //build table 
         // commented out because I have over engineered this. takes too much time to load stuff.
+        promises = []
         for (const course of this.shownCourses) {
             if (!(this.selectedSubj.includes(course.substring(0, 3)))) {
-                await this.buildCourseList(course.substring(0, 3));
+                promises.push(this.buildCourseList(course.substring(0, 3)));
             }
-            const courseItemElement = document.querySelector(`div[data-course="${course}"].course_select_item`);
-            if (courseItemElement) courseItemElement.classList.add('selected');
-            await this.updateTable(course, true);
+        }
+        await Promise.all(promises)
+
+        const courseItemElement = document.querySelectorAll(`.course_select_item`);
+        for (const courseItem of courseItemElement) {
+            if (this.shownCourses.includes(courseItem.getAttribute('data-course'))) {
+                if (courseItem) courseItem.classList.add('selected');
+            }
         }
 
         //find the course from crn
@@ -347,10 +350,15 @@ class Application {
         await Promise.all(promises);
 
         promises = []
+        for (const course of this.shownCourses) {
+            promises.push(this.updateTable(course, true));
+        }
         for (const section of this.selectedSections) {
             promises.push(this.updateTable(this.crnToCourse[section], true));
         }
         await Promise.all(promises);
+
+        await Promise.all(activeRegPromise)
 
         this.buildSelectedCourses();
     }
