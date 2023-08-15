@@ -1,12 +1,16 @@
 # bannercourseplanner
 AUS Banner Course Planner 
-Note: Be patient, banner api is quite slow.
+
+What you can do: See a weeks schedule at a glance. View multiple courses and select what fits your schedule. All from the same page.
+
+Note: Be patient, banner api is quite slow.Count to atleast 5 then check console if nothing shows up.
 
 # How to use:
 1. Download the zip.
 2. Extract into a folder.
 3. Go to chrome://extensions/ and enable developer mode
 4. Select load unpacked and navigate to the folder and you are ready to go.
+5. Go to the registration page on banner (must) and wait (also must)
 
 # Preview
 ![image](https://github.com/hamzaathar/bannercourseplanner/assets/74014297/5c81437b-5676-4675-b1af-2c987a4fa024)
