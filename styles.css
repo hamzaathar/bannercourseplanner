@@ -60,11 +60,11 @@
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
+    background-color: var(--accent-color);
 }
 
 .course_select_list {
     overflow-y: auto;
-    background-color: var(--accent-color);
 }
 
 .course_select_list > *{
@@ -82,6 +82,7 @@
     border-bottom: 1px solid var(--accent-color);
     box-sizing: border-box;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .course_select_header {
