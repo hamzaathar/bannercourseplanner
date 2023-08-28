@@ -229,6 +229,12 @@
     color: white;
 }
 
+.closed_section {
+    background-color: #F3CDCD;
+    color:#8A0000;
+    border-color: #8A0000;
+}
+
 .section > * {
     margin-bottom: 1px;
     border: none;

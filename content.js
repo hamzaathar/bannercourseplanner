@@ -221,7 +221,7 @@ class Application {
             this.buildTable();
         });
 
-        //Day ELements
+        // Day ELements
         const dayElements = document.querySelectorAll('.day');
         const baseWidth = 130;
         for (const day of dayElements) {
@@ -643,14 +643,17 @@ class Application {
             for (let i = 0; i < sectionList.length; i++) {
                 const section = sectionList[i];
 
+                console.log(section)
+
                 //create div element
                 const sectionElement = document.createElement('div');
                 sectionElement.classList.add('section');
+                if (section[1] == 'C') sectionElement.classList.add('closed_section');
                 sectionElement.setAttribute('data-course', course);
                 sectionElement.setAttribute('data-crn', `${section[2]}`);
                 sectionElement.innerHTML = `
                     <div>${section[3] + section[4]}-${section[5]}</div>
-                    <div> ${section[8]}</div>
+                    <div>${section[8]}</div>
                     <div>${section[14]}</div>
                     <div>${section[16]}</div>
                     `;
