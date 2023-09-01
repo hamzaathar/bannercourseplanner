@@ -518,8 +518,8 @@ class Application {
 
                     //calculate height based on time
                     const [sectionStart, sectionEnd] = sectionElement.getAttribute('data-time').split('-');
-                    const startTime = getTimeOffset(sectionStart);
-                    const endTime = getTimeOffset(sectionEnd);
+                    const startTime = getTimeOffset(sectionStart.trim());
+                    const endTime = getTimeOffset(sectionEnd.trim());
                     sectionElement.style.height = `${(endTime - startTime) / 4 * timeblockHeight}px`;
                     //set section start time offset
                     sectionElement.style.top = `${(startTime / 4 * timeblockHeight) +
@@ -642,8 +642,6 @@ class Application {
 
             for (let i = 0; i < sectionList.length; i++) {
                 const section = sectionList[i];
-
-                console.log(section)
 
                 //create div element
                 const sectionElement = document.createElement('div');
