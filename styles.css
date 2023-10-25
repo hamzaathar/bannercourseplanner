@@ -53,18 +53,19 @@
 }
 
 .course_select_subject {
-    border: 1px solid var(--text-color);
+    border: 1px solid #289603;
     box-sizing: border-box;
     border-radius: 10px;
     flex: 1;
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
-    background-color: var(--accent-color);
+    background-color: #cff4c2;
 }
 
 .course_select_list {
     overflow-y: auto;
+    max-width: 100%;
 }
 
 .course_select_list > *{
@@ -86,7 +87,7 @@
 }
 
 .course_select_header {
-    background-color: var(--text-color);
+    background-color: #289603;
     padding: 2px 5px;
     color: white;
     display: flex;

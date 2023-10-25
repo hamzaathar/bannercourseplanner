@@ -733,6 +733,7 @@ class Application {
             //reset the selected subjects
             this.selectedSubj = []
             //reset everything
+            this.courseNames = {}
             this.availableCourses = {};
             this.selectedSections = [] //selected sections on the table
             this.shownCourses = [];//selected courses from the course list 
@@ -751,11 +752,13 @@ class Application {
         if (!this.selectedSubj.includes(event.target.value)) {
             if (this.selectedSubj.length >= 5) {
                 alert('Please remove a subject first (Max 5)');
+                event.target.options[event.target.selectedIndex].selected = false;
                 return;
             }
             this.selectedSubj.push(event.target.value);
             this.buildCourseList(event.target.value, true);
         }
+        event.target.options[event.target.selectedIndex].selected = false;
     }
 
     //Data Retrieval and DOM addition
@@ -816,7 +819,7 @@ class Application {
                 container.replaceChild(clonedSelectElement, container.querySelector('select'));
 
                 //add event listener when user changes selected subject
-                clonedSelectElement.addEventListener("change", (e) => this.handleSubjectSelect(e));
+                clonedSelectElement.addEventListener("input", (e) => this.handleSubjectSelect(e));
             } else {
                 console.log(`Select element with name "sel_subj" not found.`);
             }
