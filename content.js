@@ -7,6 +7,7 @@ class Application {
 
     program_skeleton = `
     <div id="main_container">
+        <p id="tag">created by <a href="https://github.com/hamzaathar">Hamza Athar</a></p>
         <div class="controls">
             <div class="controls_right_container">
                 <button class="save">Save Selections</button>

@@ -24,7 +24,17 @@
     font-size: 0.85rem;
 }
 
+#tag {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 2;
+    margin: 0;
+}
 
+#tag > a {
+    text-decoration: none;
+}
 
 #main_container {
     display: flex;

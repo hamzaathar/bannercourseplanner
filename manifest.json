@@ -11,9 +11,6 @@
       "js": ["js-cookie.min.js", "content.js"]
     }
   ],
-  "action": {
-    "default_popup": "popup.html"
-  },
    "icons": {
     "128": "icon.png"
   }
