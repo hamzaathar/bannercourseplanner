@@ -3,7 +3,6 @@
   "name": "AUS Banner Course Planner",
   "version": "1.0",
   "description": "https://github.com/hamzaathar/bannercourseplanner",
-  "permissions": ["activeTab"],
   "content_scripts": [
     {
       "matches": ["https://banner.aus.edu/"],
